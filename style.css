@@ -1,0 +1,94 @@
+        html{
+            height: 100vh;
+            margin: 0;
+        }
+        body {
+            background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
+            font-family: 'Poppins', sans-serif;
+            margin: 0; /* Elimina el margen por defecto */
+            height: 100vh; /* Asegura que el body tenga al menos la altura de la ventana */
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .hero-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5rem 2rem;
+          color: white;
+          border-radius: 10px;
+          margin: 25vh 20vh;
+        }
+        .hero-text {
+            max-width: 50%;
+        }
+        .hero-text h1 { 
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .hero-buttons .btn {
+            margin-right: 10px;
+        }
+        .hero-image img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 20px; /* Ajuste superior */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            background: white;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px; /* Ajuste del padding */
+          }
+        
+          .navbar-content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        
+          .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #333;
+          }
+        
+          .navbar-nav {
+            display: flex;
+            gap: 20px;
+          }
+        
+          .nav-item .nav-link {
+            color: #333;
+            font-weight: 500;
+          }
+        
+          .btn-primary {
+            border-radius: 20px;
+            padding: 8px 16px;
+          }
+          footer {
+            color: #ffffff;            /* Color del texto */
+            text-align: center;        /* Centra el contenido */
+            padding: 15px;             /* Espaciado interno */
+            /* Si deseas que el footer se quede al final de la página: */
+            position: relative; /* o usa flexbox para layouts complejos */
+          }
+          
