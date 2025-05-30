@@ -1,48 +1,98 @@
         html{
-            height: 100vh;
+            height: 100%;
             margin: 0;
         }
         body {
-            background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
+            background: linear-gradient(40deg, #0F172A, #6D28D9, #1E1E1E);
+            /*background: linear-gradient(0deg, #0052D4, #4364F7, #6FB1FC);*/
+            background-attachment: fixed;
             font-family: 'Poppins', sans-serif;
-            margin: 0; /* Elimina el margen por defecto */
-            height: 100vh; /* Asegura que el body tenga al menos la altura de la ventana */
+            margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
-        .navbar {
-            background: white;
-            padding: 1rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        .carritoc-btn
+        {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #e7e7e7; /* morado */
+          padding: 10px;
+          border-radius: 15px; /* bordes redondeados pero no circulares */
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          z-index: 999; /* encima de todo */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
         }
+        .carritoc-btn img
+        {
+         width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 10px; 
+        }
+        .carritoc-btn:hover
+        {
+          transform: scale(1.1);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        .carrito-total-fijo
+        {
+          bottom: 20px;
+          right: 20px;
+          background-color: #4B0082;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 12px;
+          font-weight: bold;
+          z-index: 999;
+          font-size: 16px;
+          transition: transform 0.3s ease;
+        }
+        .card-body
+        {
+          justify-items: center;
+          text-align: center;
+        }
+       .descripcion
+       {
+        padding-left: 5%;
+        padding-top: 2%;
+       }
         .hero-section {
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 5rem 2rem;
+          background: linear-gradient(135deg, #1E1E1E	,#0F172A);
           color: white;
           border-radius: 10px;
-          margin: 25vh 20vh;
         }
         .hero-text {
-            max-width: 50%;
+          max-width: 50%;
         }
         .hero-text h1 { 
-            font-size: 3rem;
-            font-weight: 600;
+          font-size: 3rem;
+          font-weight: 600;
         }
         .hero-text p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+          font-size: 1.2rem;
+          margin-bottom: 20px;
         }
         .hero-buttons .btn {
-            margin-right: 10px;
+          margin-right: 10px;
         }
         .hero-image img {
-            width: 100%;
-            max-width: 250px;
-            border-radius: 10px;
+          width: 100%;
+          max-width: 350px;
+          border-radius: 10px;
+        }
+        .hero-image-1 img
+        {
+          width: 100%;
+          max-width: 800px;
         }
 
         .navbar {
@@ -52,7 +102,7 @@
             transform: translateX(-50%);
             width: 70%;
             background: white;
-            border-radius: 50px;
+            border-radius: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 10px 20px; /* Ajuste del padding */
           }
@@ -75,7 +125,8 @@
             gap: 20px;
           }
         
-          .nav-item .nav-link {
+          .nav-item .nav-link
+          { 
             color: #333;
             font-weight: 500;
           }
@@ -83,7 +134,7 @@
           .btn-primary {
             border-radius: 20px;
             padding: 8px 16px;
-          }
+            }
           footer {
             color: #ffffff;            /* Color del texto */
             text-align: center;        /* Centra el contenido */
@@ -91,4 +142,47 @@
             /* Si deseas que el footer se quede al final de la página: */
             position: relative; /* o usa flexbox para layouts complejos */
           }
-          
+          main {
+            flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+          }
+
+        
+          .btn-compra {
+          padding: 15px 25px;
+          border: unset;
+          border-radius: 15px;
+          color: #212121;
+          z-index: 1;
+          background: #e8e8e8;
+          position: relative;
+          font-weight: 1000;
+          font-size: 17px;
+          -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+          box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+          transition: all 250ms;
+          overflow: hidden;
+        }
+
+        .btn-compra::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 0;
+          border-radius: 15px;
+          background-color: #212121;
+          z-index: -1;
+          -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+          box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+          transition: all 250ms;
+        }
+
+        .btn-compra:hover {
+          color: #e8e8e8;
+        }
+
+        .btn-compra:hover::before {
+          width: 100%;
+        }
+        
